@@ -1,13 +1,257 @@
-body {
+/* Common */
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body{
+  height: 100%;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a{
+  color: black;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+#root{
+  height: 100%;
+}
+.App{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container{
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.body-page{
+  height: 100%;
+  width: 100%;
+}
+.cover{
+  display: flex;
+  align-items: center;
+}
+.main{
+  flex: 0 0 92%;
+  padding: 65px 0px;
+}
+.page-title{
+  font-size: 27px;
+  margin-bottom: 32px;
+}
+
+button{
+  padding: 12.5px 20px;
+  font-family: inherit;
+  border: 2px solid #ffa040; 
+  background-color: inherit; 
+  border-radius: 5px;
+  transition: all 0.1s linear, color 0.1s linear; 
+}
+button:hover{
+  background-color: #ffa040; 
+}
+button:active{
+  color: white; 
+}
+input{
+  font-family: inherit;
+  font-size: 15px;
+  padding: 10px 15px;
+  border: 2px solid #ffa040;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+}
+input:focus-visible {
+  outline: #A30000 auto 2px;
+}
+
+/* Header */
+
+header{
+  flex: 0 0 8%;
+  background-color: #ffa040;
+  color: black;
+  padding: 35px 0px;
+}
+.header-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-links{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-links a{
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 50px;
+}
+.header-links a.active{
+  color: white;
+}
+.header-balance p{
+  color: #A30000;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+/* Add */
+.add, .choose{
+  position: relative;
+}
+.add-form,
+.form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.add-form button{
+  padding: 12.5px 50px;
+}
+
+.form-box {
+  width: 70%;
+  margin-bottom: 32px;
+}
+
+.form-box label{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.form-box input {
+  width: 100%;
+  margin-top: 14px;
+  font-size: 17px;
+}
+.add-warnings{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+.add-warnings p{
+  color: rgb(177, 18, 0);
+  font-weight: 500;
+}
+
+/* Delete */
+
+.choose-box{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.choose-box h2{
+  margin-bottom: 24px;
+}
+.choose-box select{
+  width: 100%;
+  font-family: inherit;
+  font-size: 15px;
+  padding: 15px 5px;
+  border: 2px solid #ffa040;
+  background-color: transparent;
+  border-radius: 5px;
+  margin-bottom: 24px;
+  transition: all 0.3s linear;
+}
+.choose-box select:focus-visible {
+  outline: #A30000 auto 1px;
+}
+.choose-error{
+  text-align: center;
+}
+.choose-error h2{
+  margin-top: 200px;
+  font-size: 35px;
+}
+
+/* Sell */
+
+.select-box-item{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+.select-box-item p{
+  margin-bottom: 16px;
+}
+
+/* History */
+
+.history-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-item{
+  width: 80%;
+  padding: 20px;
+  border: 2px solid #ffa040;
+  margin-bottom: 35px;
+}
+
+.history-item h3, .history-item p{
+ margin-bottom: 12px;
+}
+
+.history-item p:last-child{
+  margin-bottom: 0px;
+}
+
+/* Home */
+
+.statistic-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statistic-item{
+  width: 80%;
+  padding: 20px;
+  border: 2px solid #ffa040;
+  margin-bottom: 35px;
+  text-align: center;
+}
+.statistic-item p{
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+/* Error */
+
+.error-page{
+  justify-content: center;
+  text-align: center;
+}
+.error-page p{
+  font-weight: bold;
+  font-size: 30px;
+}
+.error-page h1{
+  color: #ffa040;
+  font-size: 250px;
 }
